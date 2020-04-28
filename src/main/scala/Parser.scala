@@ -1,12 +1,13 @@
 import java.util
 
-import com.google.gson.GsonBuilder
+import com.google.gson.{Gson, GsonBuilder}
 
 import scala.collection.mutable
 import scala.collection.mutable.ListBuffer
 
 object Parser {
-  val gson = new GsonBuilder().setPrettyPrinting().create
+
+  val gson: Gson = new GsonBuilder().setPrettyPrinting().create
 
   def toJson(res: util.List[Book]): String = gson.toJson(res)
 
